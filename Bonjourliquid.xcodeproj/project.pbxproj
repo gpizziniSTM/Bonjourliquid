@@ -272,7 +272,7 @@
 				DEVELOPMENT_TEAM = WK4XB22QCG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Bonjourliquid/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Bonjour;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Serve per inviare la posizione al momento dell’inserimento assenza";
@@ -310,7 +310,7 @@
 				DEVELOPMENT_TEAM = WK4XB22QCG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Bonjourliquid/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Bonjour;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Serve per inviare la posizione al momento dell’inserimento assenza";
