@@ -7,19 +7,32 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		5EE000CD2F2BC8A600954F51 /* Bonjourliquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonjourliquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE5A3ED2EF051C400CFE308 /* Bonjourliquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonjourliquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5EE5A4142EF06D3300CFE308 /* Exceptions for "Bonjourliquid" folder in "Bonjourliquid" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5EE5A3EC2EF051C400CFE308 /* Bonjourliquid */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5EE000CF2F2BC8A600954F51 /* Bonjourliquid */ = {
+		5EE5A3EF2EF051C400CFE308 /* Bonjourliquid */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5EE5A4142EF06D3300CFE308 /* Exceptions for "Bonjourliquid" folder in "Bonjourliquid" target */,
+			);
 			path = Bonjourliquid;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5EE000CA2F2BC8A600954F51 /* Frameworks */ = {
+		5EE5A3EA2EF051C400CFE308 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5EE000C42F2BC8A600954F51 = {
+		5EE5A3E42EF051C400CFE308 = {
 			isa = PBXGroup;
 			children = (
-				5EE000CF2F2BC8A600954F51 /* Bonjourliquid */,
-				5EE000CE2F2BC8A600954F51 /* Products */,
+				5EE5A3EF2EF051C400CFE308 /* Bonjourliquid */,
+				5EE5A3EE2EF051C400CFE308 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5EE000CE2F2BC8A600954F51 /* Products */ = {
+		5EE5A3EE2EF051C400CFE308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EE000CD2F2BC8A600954F51 /* Bonjourliquid.app */,
+				5EE5A3ED2EF051C400CFE308 /* Bonjourliquid.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +61,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5EE000CC2F2BC8A600954F51 /* Bonjourliquid */ = {
+		5EE5A3EC2EF051C400CFE308 /* Bonjourliquid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EE000D82F2BC8A600954F51 /* Build configuration list for PBXNativeTarget "Bonjourliquid" */;
+			buildConfigurationList = 5EE5A3F82EF051C500CFE308 /* Build configuration list for PBXNativeTarget "Bonjourliquid" */;
 			buildPhases = (
-				5EE000C92F2BC8A600954F51 /* Sources */,
-				5EE000CA2F2BC8A600954F51 /* Frameworks */,
-				5EE000CB2F2BC8A600954F51 /* Resources */,
+				5EE5A3E92EF051C400CFE308 /* Sources */,
+				5EE5A3EA2EF051C400CFE308 /* Frameworks */,
+				5EE5A3EB2EF051C400CFE308 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5EE000CF2F2BC8A600954F51 /* Bonjourliquid */,
+				5EE5A3EF2EF051C400CFE308 /* Bonjourliquid */,
 			);
 			name = Bonjourliquid;
 			packageProductDependencies = (
 			);
 			productName = Bonjourliquid;
-			productReference = 5EE000CD2F2BC8A600954F51 /* Bonjourliquid.app */;
+			productReference = 5EE5A3ED2EF051C400CFE308 /* Bonjourliquid.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5EE000C52F2BC8A600954F51 /* Project object */ = {
+		5EE5A3E52EF051C400CFE308 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2620;
+				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					5EE000CC2F2BC8A600954F51 = {
-						CreatedOnToolsVersion = 26.2;
+					5EE5A3EC2EF051C400CFE308 = {
+						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
 			};
-			buildConfigurationList = 5EE000C82F2BC8A600954F51 /* Build configuration list for PBXProject "Bonjourliquid" */;
+			buildConfigurationList = 5EE5A3E82EF051C400CFE308 /* Build configuration list for PBXProject "Bonjourliquid" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 5EE000C42F2BC8A600954F51;
+			mainGroup = 5EE5A3E42EF051C400CFE308;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5EE000CE2F2BC8A600954F51 /* Products */;
+			productRefGroup = 5EE5A3EE2EF051C400CFE308 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EE000CC2F2BC8A600954F51 /* Bonjourliquid */,
+				5EE5A3EC2EF051C400CFE308 /* Bonjourliquid */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5EE000CB2F2BC8A600954F51 /* Resources */ = {
+		5EE5A3EB2EF051C400CFE308 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +128,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5EE000C92F2BC8A600954F51 /* Sources */ = {
+		5EE5A3E92EF051C400CFE308 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +138,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5EE000D62F2BC8A600954F51 /* Debug */ = {
+		5EE5A3F62EF051C500CFE308 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -178,18 +191,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		5EE000D72F2BC8A600954F51 /* Release */ = {
+		5EE5A3F72EF051C500CFE308 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,26 +250,32 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		5EE000D92F2BC8A600954F51 /* Debug */ = {
+		5EE5A3F92EF051C500CFE308 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = WK4XB22QCG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bonjourliquid/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bonjour;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Serve per inviare la posizione al momento dell’inserimento assenza";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -265,7 +285,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = STM.Bonjourliquid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -278,16 +298,22 @@
 			};
 			name = Debug;
 		};
-		5EE000DA2F2BC8A600954F51 /* Release */ = {
+		5EE5A3FA2EF051C500CFE308 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = WK4XB22QCG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bonjourliquid/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bonjour;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Serve per inviare la posizione al momento dell’inserimento assenza";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,9 +323,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = STM.Bonjourliquid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -313,25 +340,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5EE000C82F2BC8A600954F51 /* Build configuration list for PBXProject "Bonjourliquid" */ = {
+		5EE5A3E82EF051C400CFE308 /* Build configuration list for PBXProject "Bonjourliquid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EE000D62F2BC8A600954F51 /* Debug */,
-				5EE000D72F2BC8A600954F51 /* Release */,
+				5EE5A3F62EF051C500CFE308 /* Debug */,
+				5EE5A3F72EF051C500CFE308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EE000D82F2BC8A600954F51 /* Build configuration list for PBXNativeTarget "Bonjourliquid" */ = {
+		5EE5A3F82EF051C500CFE308 /* Build configuration list for PBXNativeTarget "Bonjourliquid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EE000D92F2BC8A600954F51 /* Debug */,
-				5EE000DA2F2BC8A600954F51 /* Release */,
+				5EE5A3F92EF051C500CFE308 /* Debug */,
+				5EE5A3FA2EF051C500CFE308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5EE000C52F2BC8A600954F51 /* Project object */;
+	rootObject = 5EE5A3E52EF051C400CFE308 /* Project object */;
 }
