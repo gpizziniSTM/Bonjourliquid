@@ -1,6 +1,6 @@
 //
 //  Base32.swift
-//  Liquid
+//  Bonjourliquid
 //
 //  Created by Giuseppe Pizzini on 15/12/25.
 //

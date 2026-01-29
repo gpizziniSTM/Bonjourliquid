@@ -1,6 +1,6 @@
 //
 //  BonjourAPIClient.swift
-//  Liquid
+//  Bonjourliquid
 //
 //  Created by Giuseppe Pizzini on 26/01/26.
 //
