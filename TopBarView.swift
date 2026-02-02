@@ -34,14 +34,14 @@ struct TopBarView: View {
                 .scaledToFit()
                 .frame(height: 40)
         }
-        .padding(14)
+        .padding(16)
         .background(.ultraThinMaterial)
         .overlay(
-            RoundedRectangle(cornerRadius: 22)
-                .stroke(.white.opacity(0.3), lineWidth: 1.5)
+            RoundedRectangle(cornerRadius: 24)
+                .stroke(.white.opacity(0.35), lineWidth: 1.5)
         )
-        .clipShape(RoundedRectangle(cornerRadius: 22))
-        .shadow(color: .black.opacity(0.15), radius: 12, x: 0, y: 4)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
+        .shadow(color: .black.opacity(0.2), radius: 16, x: 0, y: 8)
     }
 
     @ViewBuilder

@@ -73,12 +73,13 @@ struct BottomDockView: View {
             .padding(.vertical, 12)
             .background(.ultraThinMaterial)
             .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(.white.opacity(0.3), lineWidth: 1.5)
+                RoundedRectangle(cornerRadius: 24)
+                    .stroke(.white.opacity(0.35), lineWidth: 1.5)
             )
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .clipShape(RoundedRectangle(cornerRadius: 24))
             .padding(.horizontal, 12)
             .padding(.vertical, 12)
+            .shadow(color: .black.opacity(0.2), radius: 16, x: 0, y: 8)
         }
         .background(Color.black)
     }

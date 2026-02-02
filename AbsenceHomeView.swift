@@ -26,17 +26,25 @@ struct AbsenceHomeView: View {
             )
             .ignoresSafeArea()
 
-            VStack(spacing: 0) {
-                // TopBar
+            VStack(spacing: 12) {
+                // TopBar - Liquid Glass
                 TopBarView(
                     userName: userName,
                     userSubtitle: "Oggi: Presenza",
                     pictureURL: auth.pictureURL
                 )
-                .padding()
+                .padding(.horizontal)
+                .padding(.top)
 
-                // Centro - Calendar o Form
+                // Centro - Calendar o Form - Liquid Glass
                 ZStack {
+                    RoundedRectangle(cornerRadius: 24)
+                        .fill(.ultraThinMaterial)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.white.opacity(0.3), lineWidth: 1.5)
+                        )
+
                     if selectedAction == "calendar" {
                         AbsenceCalendarView(
                             month: $calendarMonth,
@@ -44,7 +52,7 @@ struct AbsenceHomeView: View {
                             isLoading: isCalendarLoading,
                             errorMessage: calendarError
                         )
-                        .padding()
+                        .padding(20)
                     } else if selectedAction == "malattia" {
                         DateRangeAbsenceView(
                             title: "Malattia",
@@ -52,21 +60,21 @@ struct AbsenceHomeView: View {
                             viewModel: viewModel,
                             locationProvider: locationProvider
                         )
-                        .padding()
+                        .padding(20)
                     } else if selectedAction == "ferie" {
                         FerieRolAbsenceView(
                             viewModel: viewModel,
                             locationProvider: locationProvider
                         )
                         .environmentObject(auth)
-                        .padding()
+                        .padding(20)
                     } else if selectedAction == "rol" {
                         FerieRolAbsenceView(
                             viewModel: viewModel,
                             locationProvider: locationProvider
                         )
                         .environmentObject(auth)
-                        .padding()
+                        .padding(20)
                     } else if selectedAction == "congedo" {
                         DateRangeAbsenceView(
                             title: "Congedo",
@@ -74,12 +82,13 @@ struct AbsenceHomeView: View {
                             viewModel: viewModel,
                             locationProvider: locationProvider
                         )
-                        .padding()
+                        .padding(20)
                     }
                 }
+                .padding(.horizontal)
                 .frame(maxHeight: .infinity)
 
-                // Dock
+                // Dock - Liquid Glass
                 BottomDockView(
                     onMalattia: { selectedAction = "malattia" },
                     onFerie: { selectedAction = "ferie" },
@@ -87,6 +96,8 @@ struct AbsenceHomeView: View {
                     onCongedo: { selectedAction = "congedo" },
                     onEsci: onExit
                 )
+                .padding(.horizontal)
+                .padding(.bottom)
             }
         }
         .onAppear {
