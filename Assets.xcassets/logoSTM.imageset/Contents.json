@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "logoSTM.png",
+      "filename" : "logo STM nuovo2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -19,8 +19,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : false
   }
 }

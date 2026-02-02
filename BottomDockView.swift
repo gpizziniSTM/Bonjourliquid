@@ -150,7 +150,7 @@ struct DockButton: View {
             .foregroundColor(textColor)
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(color.opacity(isSelected ? 0.8 : 0.5))
+                    .fill(color.opacity(isSelected ? 0.9 : 0.7))
             )
         }
     }

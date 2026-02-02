@@ -32,7 +32,7 @@ struct TopBarView: View {
             Image("logoSTM")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 48)
+                .frame(height: 56)
                 .padding(.trailing, 4)
                 .foregroundColor(.white)
         }
