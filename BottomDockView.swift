@@ -16,8 +16,19 @@ struct BottomDockView: View {
     var body: some View {
         VStack(spacing: 12) {
             VStack(spacing: 12) {
-                // Riga 1: Oggi, Esci, Indietro
+                // Riga 1: Altro, Oggi, Esci, Indietro
                 HStack(spacing: 12) {
+                    DockButton(
+                        icon: "📝",
+                        label: "Altro",
+                        color: Color(red: 0.498, green: 0.0, blue: 1.0),  // Ultra Purple #7F00FF
+                        isSelected: selectedAction == "altro",
+                        action: {
+                            selectedAction = "altro"
+                            onAltro()
+                        }
+                    )
+                    
                     DockButton(
                         icon: "📅",
                         label: "Oggi",
@@ -29,12 +40,10 @@ struct BottomDockView: View {
                         }
                     )
                     
-                    Spacer()
-                    
                     DockButton(
                         icon: "🚪",
                         label: "Esci",
-                        color: Color(red: 0.420, green: 0.443, blue: 0.502),  // Steel Gray #6B7280
+                        color: Color(red: 0.95, green: 0.95, blue: 0.95),  // Vivid White
                         isSelected: false,
                         action: {
                             selectedAction = "esci"
@@ -46,7 +55,7 @@ struct BottomDockView: View {
                     DockButton(
                         icon: "⬅️",
                         label: "Indietro",
-                        color: Color(red: 0.420, green: 0.443, blue: 0.502),  // Steel Gray #6B7280
+                        color: Color(red: 0.95, green: 0.95, blue: 0.95),  // Vivid White
                         isSelected: false,
                         action: {
                             selectedAction = "indietro"
@@ -56,7 +65,7 @@ struct BottomDockView: View {
                     )
                 }
                 
-                // Riga 2: Malattia, Ferie, Congedo, Clienti, Altro
+                // Riga 2: Malattia, Ferie/ROL, Congedo, Clienti
                 HStack(spacing: 12) {
                     DockButton(
                         icon: "🛏️",
@@ -101,17 +110,6 @@ struct BottomDockView: View {
                             onClienti()
                         }
                     )
-                    
-                    DockButton(
-                        icon: "📝",
-                        label: "Altro",
-                        color: Color(red: 0.498, green: 0.0, blue: 1.0),  // Ultra Purple #7F00FF
-                        isSelected: selectedAction == "altro",
-                        action: {
-                            selectedAction = "altro"
-                            onAltro()
-                        }
-                    )
                 }
             }
             .padding(12)
@@ -150,7 +148,7 @@ struct DockButton: View {
             .foregroundColor(textColor)
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(color.opacity(isSelected ? 0.9 : 0.7))
+                    .fill(color.opacity(isSelected ? 1.0 : 0.8))
             )
         }
     }
