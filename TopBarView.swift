@@ -34,6 +34,7 @@ struct TopBarView: View {
                 .scaledToFit()
                 .frame(height: 48)
                 .padding(.trailing, 4)
+                .foregroundColor(.white)
         }
         .padding(16)
         .background(.ultraThinMaterial)
