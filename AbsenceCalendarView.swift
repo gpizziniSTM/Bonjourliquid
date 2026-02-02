@@ -122,7 +122,7 @@ struct AbsenceCalendarView: View {
         cal.firstWeekday = 2
 
         let startOfMonth = cal.date(from: cal.dateComponents([.year, .month], from: month)) ?? month
-        let range = cal.range(of: .day, in: .month, for: startOfMonth) ?? 1...30
+        let range = cal.range(of: .day, in: .month, for: startOfMonth) ?? (1..<31)
         let firstWeekday = cal.component(.weekday, from: startOfMonth)
         let leadingEmpty = (firstWeekday - cal.firstWeekday + 7) % 7
 

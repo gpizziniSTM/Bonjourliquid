@@ -72,6 +72,6 @@ struct TopBarView: View {
     private var fallbackAvatar: some View {
         Circle()
             .fill(.gray.opacity(0.25))
-            .overlay(Text(String(userName.prefix(1))).bold())
+            .overlay(Text(String((userName ?? "").prefix(1))).bold())
     }
 }
