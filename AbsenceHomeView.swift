@@ -11,94 +11,86 @@ struct AbsenceHomeView: View {
     @State private var calendarEvents: [Date: [Color]] = [:]
     @State private var isCalendarLoading = false
     @State private var calendarError: String?
+    @State private var selectedAction: String = "calendar"
 
     private var userName: String {
         auth.displayName ?? auth.fallbackName()
     }
 
     var body: some View {
-        VStack(spacing: 16) {
-
-            TopBarView(
-                userName: userName,
-                userSubtitle: "Oggi: Presenza",
-                pictureURL: auth.pictureURL,
-                showsExit: true,
-                onExit: onExit
-            )
-
-            AbsenceCalendarView(
-                month: $calendarMonth,
-                events: calendarEvents,
-                isLoading: isCalendarLoading,
-                errorMessage: calendarError
-            )
-
-            LazyVGrid(
-                columns: [GridItem(.flexible()), GridItem(.flexible())],
-                spacing: 16
-            ) {
-
-                AbsenceTile(title: "Ferie/Rol", icon: "🏝️", color: .orange) {
-                    FerieRolAbsenceView(
-                        viewModel: viewModel,
-                        locationProvider: locationProvider
-                    )
-                    .environmentObject(auth)
-                }
-
-                AbsenceTile(title: "Malattia", icon: "🛏️", color: Color(red: 1, green: 0.2, blue: 0.2)) {
-                    DateRangeAbsenceView(
-                        title: "Malattia",
-                        actionId: 2,
-                        viewModel: viewModel,
-                        locationProvider: locationProvider
-                    )
-                }
-
-                AbsenceTile(title: "Congedo", icon: "📅", color: .purple) {
-                    DateRangeAbsenceView(
-                        title: "Congedo",
-                        actionId: 3,
-                        viewModel: viewModel,
-                        locationProvider: locationProvider
-                    )
-                }
-
-                AbsenceTile(title: "Clienti", icon: "🐝", color: .blue) {
-                    SingleDayConfirmView(
-                        title: "Clienti",
-                        actionId: 4,
-                        viewModel: viewModel,
-                        locationProvider: locationProvider
-                    )
-                }
-
-                AbsenceTile(title: "Altro", icon: "❓", color: .green) {
-                    SingleDayConfirmView(
-                        title: "Altro",
-                        actionId: 5,
-                        viewModel: viewModel,
-                        locationProvider: locationProvider
-                    )
-                }
-
-                AbsenceTile(title: "Oggi", icon: "📊", color: Color(red: 1, green: 0.2, blue: 0.3)) {
-                    TodayReportView(viewModel: viewModel)
-                }
-            }
-
-            Spacer()
-        }
-        .padding()
-        .background(
+        ZStack {
             LinearGradient(
                 colors: [Color.black, Color(red: 0.08, green: 0.1, blue: 0.18)],
                 startPoint: .top,
                 endPoint: .bottom
             )
             .ignoresSafeArea()
-        )
+
+            VStack(spacing: 0) {
+                // TopBar
+                TopBarView(
+                    userName: userName,
+                    userSubtitle: "Oggi: Presenza",
+                    pictureURL: auth.pictureURL,
+                    showsExit: true,
+                    onExit: onExit
+                )
+                .padding()
+
+                // Centro - Calendar o Form
+                ZStack {
+                    if selectedAction == "calendar" {
+                        AbsenceCalendarView(
+                            month: $calendarMonth,
+                            events: calendarEvents,
+                            isLoading: isCalendarLoading,
+                            errorMessage: calendarError
+                        )
+                        .padding()
+                    } else if selectedAction == "malattia" {
+                        DateRangeAbsenceView(
+                            title: "Malattia",
+                            actionId: 2,
+                            viewModel: viewModel,
+                            locationProvider: locationProvider
+                        )
+                        .padding()
+                    } else if selectedAction == "ferie" {
+                        FerieRolAbsenceView(
+                            viewModel: viewModel,
+                            locationProvider: locationProvider
+                        )
+                        .environmentObject(auth)
+                        .padding()
+                    } else if selectedAction == "rol" {
+                        FerieRolAbsenceView(
+                            viewModel: viewModel,
+                            locationProvider: locationProvider
+                        )
+                        .environmentObject(auth)
+                        .padding()
+                    } else if selectedAction == "congedo" {
+                        DateRangeAbsenceView(
+                            title: "Congedo",
+                            actionId: 3,
+                            viewModel: viewModel,
+                            locationProvider: locationProvider
+                        )
+                        .padding()
+                    }
+                }
+                .frame(maxHeight: .infinity)
+
+                // Dock
+                BottomDockView(
+                    onMalattia: { selectedAction = "malattia" },
+                    onFerie: { selectedAction = "ferie" },
+                    onROL: { selectedAction = "rol" },
+                    onCongedo: { selectedAction = "congedo" },
+                    onEsci: onExit
+                )
+            }
+        }
         .onAppear {
             locationProvider.requestOnce()
             Task { await loadCalendarEvents() }
