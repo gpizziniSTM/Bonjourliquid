@@ -30,7 +30,7 @@ struct AbsenceHomeView: View {
                 // TopBar - Liquid Glass
                 TopBarView(
                     userName: userName,
-                    userSubtitle: "Oggi: Presenza",
+                    userSubtitle: nil,
                     pictureURL: auth.pictureURL
                 )
                 .padding(.horizontal)

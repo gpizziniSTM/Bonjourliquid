@@ -91,24 +91,35 @@ struct AbsenceCalendarView: View {
             if let date = item.date {
                 let isToday = calendar.isDateInToday(date)
                 let colors = events[calendar.startOfDay(for: date)] ?? []
+                let backgroundColor = colors.first ?? Color.clear
 
                 Text("\(calendar.component(.day, from: date))")
                     .font(.subheadline)
-                    .foregroundColor(item.isCurrentMonth ? .white : .white.opacity(0.35))
+                    .fontWeight(.semibold)
+                    .foregroundColor(colors.isEmpty ? (item.isCurrentMonth ? .white : .white.opacity(0.35)) : .white)
                     .frame(width: 28, height: 28)
                     .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(backgroundColor.opacity(colors.isEmpty ? 0 : 0.7))
+                    )
+                    .overlay(
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(isToday ? .white : .clear, lineWidth: 1)
                     )
 
-                HStack(spacing: 4) {
-                    ForEach(Array(colors.prefix(3).enumerated()), id: \.offset) { _, color in
-                        Circle()
-                            .fill(color)
-                            .frame(width: 8, height: 8)
+                if colors.count > 1 {
+                    HStack(spacing: 4) {
+                        ForEach(Array(colors.prefix(3).enumerated()), id: \.offset) { _, color in
+                            Circle()
+                                .fill(color)
+                                .frame(width: 8, height: 8)
+                        }
                     }
+                    .frame(height: 10)
+                } else {
+                    Spacer()
+                        .frame(height: 10)
                 }
-                .frame(height: 10)
             } else {
                 Spacer()
                     .frame(height: 38)
