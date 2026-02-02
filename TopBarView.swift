@@ -32,7 +32,8 @@ struct TopBarView: View {
             Image("logoSTM")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 40)
+                .frame(height: 48)
+                .padding(.trailing, 4)
         }
         .padding(16)
         .background(.ultraThinMaterial)
