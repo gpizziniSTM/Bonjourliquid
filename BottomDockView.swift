@@ -81,7 +81,7 @@ struct BottomDockView: View {
                     DockButton(
                         icon: "🏝️",
                         label: "Ferie/ROL",
-                        color: Color(red: 0.956, green: 0.766, blue: 0.188),  // Warm Gold #F4C430
+                        color: Color(red: 1.0, green: 0.839, blue: 0.039),  // Vivid Yellow #FFD60A
                         isSelected: selectedAction == "ferie" || selectedAction == "rol",
                         action: {
                             selectedAction = "ferie"

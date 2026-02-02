@@ -84,13 +84,11 @@ struct AbsenceHomeView: View {
                         )
                         .padding(20)
                     } else if selectedAction == "clienti" {
-                        VStack {
-                            Text("Clienti")
-                                .font(.title2)
-                                .fontWeight(.semibold)
-                                .foregroundColor(.white)
-                            Spacer()
-                        }
+                        ClientiAbsenceView(
+                            viewModel: viewModel,
+                            locationProvider: locationProvider
+                        )
+                        .environmentObject(auth)
                         .padding(20)
                     } else if selectedAction == "altro" {
                         VStack {
