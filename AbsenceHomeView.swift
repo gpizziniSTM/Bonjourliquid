@@ -83,6 +83,24 @@ struct AbsenceHomeView: View {
                             locationProvider: locationProvider
                         )
                         .padding(20)
+                    } else if selectedAction == "clienti" {
+                        VStack {
+                            Text("Clienti")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
+                        .padding(20)
+                    } else if selectedAction == "altro" {
+                        VStack {
+                            Text("Altro")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
+                        .padding(20)
                     }
                 }
                 .padding(.horizontal)
@@ -94,7 +112,14 @@ struct AbsenceHomeView: View {
                     onFerie: { selectedAction = "ferie" },
                     onROL: { selectedAction = "rol" },
                     onCongedo: { selectedAction = "congedo" },
-                    onEsci: onExit
+                    onClienti: { selectedAction = "clienti" },
+                    onAltro: { selectedAction = "altro" },
+                    onOggi: { 
+                        selectedAction = "calendar"
+                        Task { await loadCalendarEvents() }
+                    },
+                    onEsci: onExit,
+                    onIndietro: { selectedAction = "calendar" }
                 )
                 .padding(.horizontal)
                 .padding(.bottom)
