@@ -45,14 +45,6 @@ struct FerieRolAbsenceView: View {
             .ignoresSafeArea()
 
             VStack(spacing: 18) {
-                TopBarView(
-                    userName: auth.displayName ?? auth.fallbackName(),
-                    userSubtitle: "Oggi: Presenza",
-                    pictureURL: auth.pictureURL,
-                    showsExit: false,
-                    onExit: {}
-                )
-
                 Spacer(minLength: 8)
 
                 VStack(spacing: 16) {
