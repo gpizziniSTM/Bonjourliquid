@@ -31,9 +31,7 @@ struct AbsenceHomeView: View {
                 TopBarView(
                     userName: userName,
                     userSubtitle: "Oggi: Presenza",
-                    pictureURL: auth.pictureURL,
-                    showsExit: true,
-                    onExit: onExit
+                    pictureURL: auth.pictureURL
                 )
                 .padding()
 

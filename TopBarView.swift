@@ -4,15 +4,13 @@ struct TopBarView: View {
     let userName: String?
     let userSubtitle: String?
     let pictureURL: String?
-    let showsExit: Bool
-    let onExit: () -> Void
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 16) {
 
             if let userName, !userName.isEmpty {
                 avatar
-                    .frame(width: 44, height: 44)
+                    .frame(width: 56, height: 56)
                     .clipShape(Circle())
 
                 VStack(alignment: .leading, spacing: 2) {
@@ -34,13 +32,7 @@ struct TopBarView: View {
             Image("logoSTM")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 30)
-
-            if showsExit {
-                Button("Esci", action: onExit)
-                    .buttonStyle(.bordered)
-                    .tint(.red)
-            }
+                .frame(height: 40)
         }
         .padding(14)
         .background(.ultraThinMaterial)

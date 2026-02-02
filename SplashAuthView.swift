@@ -13,9 +13,7 @@ struct SplashAuthView: View {
             TopBarView(
                 userName: nil,
                 userSubtitle: nil,
-                pictureURL: nil,
-                showsExit: false,
-                onExit: {}
+                pictureURL: nil
             )
 
             Spacer()
